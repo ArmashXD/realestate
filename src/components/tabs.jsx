@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import Card from './card';
-import cardImageBg1 from '../assets/images/Image.png';
-import cardImageBg2 from '../assets/images/Image-2.png';
-import cardImageBg3 from '../assets/images/Image-3.png';
-import cardImageBg4 from '../assets/images/Image-4.png';
-import cardImageBg5 from '../assets/images/Image-5.png';
-import cardImageBg6 from '../assets/images/Image-6.png';
-import cardImageBg7 from '../assets/images/Image-7.png';
-import cardImageBg8 from '../assets/images/Image-8.png';
-import cardImageBg9 from '../assets/images/Image-9.png';
+import { useState } from "react";
+import Card from "./card";
+import cardImageBg1 from "../assets/images/Image.png";
+import cardImageBg2 from "../assets/images/Image-2.png";
+import cardImageBg3 from "../assets/images/Image-3.png";
+import cardImageBg4 from "../assets/images/Image-4.png";
+import cardImageBg5 from "../assets/images/Image-5.png";
+import cardImageBg6 from "../assets/images/Image-6.png";
+import cardImageBg7 from "../assets/images/Image-7.png";
+import cardImageBg8 from "../assets/images/Image-8.png";
+import cardImageBg9 from "../assets/images/Image-9.png";
 
 const HomeCardComponent = () => {
   return (
@@ -17,46 +17,37 @@ const HomeCardComponent = () => {
         imageSrc={cardImageBg1}
         title="Modern Glass House"
         price="$ 1,625,000"
+        address={"DHA Karachi (Defense Housing Authority)"}
       />
       <Card
         imageSrc={cardImageBg2}
-        title="Modern Glass House"
+        title="Italian Glass House"
         price="$ 1,625,000"
+        address={"Gulshan-e-Iqbal:"}
       />
       <Card
         imageSrc={cardImageBg3}
-        title="Modern Glass House"
+        title="American Glass House"
         price="$ 1,625,000"
+        address={"ASF Housing Scheme"}
       />
       <Card
         imageSrc={cardImageBg4}
-        title="Modern Glass House"
+        title="American wood House"
         price="$ 1,625,000"
+        address={"Gulistan-e-Jauhar:"}
       />
       <Card
         imageSrc={cardImageBg5}
-        title="Modern Glass House"
+        title="Italian wood House"
         price="$ 1,625,000"
+        address={"DHA Karachi (Defense Housing Authority)"}
       />
       <Card
         imageSrc={cardImageBg6}
-        title="Modern Glass House"
+        title="American Brick House"
         price="$ 1,625,000"
-      />
-      <Card
-        imageSrc={cardImageBg7}
-        title="Modern Glass House"
-        price="$ 1,625,000"
-      />
-      <Card
-        imageSrc={cardImageBg8}
-        title="Modern Glass House"
-        price="$ 1,625,000"
-      />
-      <Card
-        imageSrc={cardImageBg9}
-        title="Modern Glass House"
-        price="$ 1,625,000"
+        address={"Bahria Town Karachi"}
       />
     </div>
   );
@@ -116,12 +107,11 @@ const ApartmentCardComponent = () => {
 };
 
 const tabs = [
-  { label: 'Home', content: <HomeCardComponent /> },
-  { label: 'Apartment', content: <ApartmentCardComponent /> },
-  { label: 'Office', content: <HomeCardComponent /> },
-  { label: 'Warehouse', content: <ApartmentCardComponent /> },
-  { label: 'Parking', content: <HomeCardComponent /> },
-  { label: 'Commercial', content: <ApartmentCardComponent /> },
+  { label: "Home", content: <HomeCardComponent /> },
+  { label: "Apartment", content: <ApartmentCardComponent /> },
+  { label: "Office", content: <HomeCardComponent /> },
+  { label: "Warehouse", content: <ApartmentCardComponent /> },
+  { label: "Commercial", content: <ApartmentCardComponent /> },
 ];
 
 const Tabs = () => {
@@ -135,10 +125,10 @@ const Tabs = () => {
             key={idx}
             className={`${
               idx === activeTabIndex
-                ? 'border-b-2 border-orange-500 text-orange-500 '
-                : 'text-gray-500 hover:text-gray-700 dark:text-white dark:hover:text-gray-500'
+                ? "border-b-2 border-orange-500 text-orange-500 "
+                : "text-gray-500 hover:text-gray-700 dark:text-white dark:hover:text-gray-500"
             } px-2 font-normal py-4 sm:px-6 sm:font-medium focus:outline-none ${
-              idx === 3 && 'hidden sm:flex'
+              idx === 3 && "hidden sm:flex"
             }`}
             onClick={() => setActiveTabIndex(idx)}
           >

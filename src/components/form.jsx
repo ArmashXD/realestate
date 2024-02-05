@@ -1,26 +1,26 @@
-import Image from 'next/image';
-import React, { useState } from 'react';
-import usernameIcon from '../assets/icons/Icon.png';
-import callIcon from '../assets/icons/callIcon.png';
-import emailIcon from '../assets/icons/email.png';
-import messageIcon from '../assets/icons/message.png';
+import Image from "next/image";
+import React, { useState } from "react";
+import usernameIcon from "../assets/icons/Icon.png";
+import callIcon from "../assets/icons/callIcon.png";
+import emailIcon from "../assets/icons/email.png";
+import messageIcon from "../assets/icons/message.png";
 
-import { useForm } from 'react-hook-form';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const schema = yup.object().shape({
-  firstName: yup.string().required('First name is required'),
-  lastName: yup.string().required('Last name is required'),
-  email: yup.string().email('Invalid email').required('Email is required'),
+  firstName: yup.string().required("First name is required"),
+  lastName: yup.string().required("Last name is required"),
+  email: yup.string().email("Invalid email").required("Email is required"),
   phoneNumber: yup
     .string()
-    .matches(/^[0-9]*$/, 'Invalid phone number, please enter numbers only')
-    .required('Phone number is required'),
-  message: yup.string().required('Message is required'),
+    .matches(/^[0-9]*$/, "Invalid phone number, please enter numbers only")
+    .required("Phone number is required"),
+  message: yup.string().required("Message is required"),
 });
 
 const Form = () => {
@@ -35,7 +35,7 @@ const Form = () => {
     try {
       setSubmitting(true);
       console.log(data);
-      toast.success('Form submitted successfully!');
+      toast.success("Form submitted successfully!");
       reset();
     } catch (error) {
       console.error(error);
@@ -57,17 +57,17 @@ const Form = () => {
             contacts
           </p>
           <p className="text-4xl text-blue-900 font-bold text-center z-20 relative capitalize mt-7 sm:mt-14 dark:text-gray-300">
-            get in touch now
+            How can we help you today?
           </p>
         </div>
       </div>
 
       <div className="relative justify-center items-center">
         <p className="font-medium text-base text-center mt-20 mb-10 text-bluePText">
-          We have developed a unique space where you can work and create.
-          <br /> We thought of everything to the smallest detail.
+          Do not hesitate to reach out to us by filling out the form below. Our
+          customer service
           <br />
-          You will be able to conduct your business, conduct meetings, meetings
+          representative will promptly get in touch with you to assist you
         </p>
       </div>
 
@@ -81,7 +81,7 @@ const Form = () => {
               <div className="flex flex-col">
                 <label className="relative">
                   <input
-                    {...register('firstName')}
+                    {...register("firstName")}
                     name="firstName"
                     placeholder="First Name"
                     className="flex justify-between items-center rounded-xl py-[15px] px-[30px] shadow-md sm:w-[320px] h-[60px] capitalize mb-5 sm:mb-0 dark:bg-gray-600"
@@ -102,7 +102,7 @@ const Form = () => {
               <div className="flex flex-col">
                 <label className="relative">
                   <input
-                    {...register('lastName')}
+                    {...register("lastName")}
                     name="lastName"
                     placeholder="Last Name"
                     className="flex justify-between items-center  rounded-xl py-[15px] px-[30px] shadow-md sm:w-[320px] h-[60px] capitalize mb-5 sm:mb-0 dark:bg-gray-600"
@@ -126,7 +126,7 @@ const Form = () => {
               <div className="flex flex-col">
                 <label className="relative ">
                   <input
-                    {...register('email')}
+                    {...register("email")}
                     name="email"
                     placeholder="Email Address"
                     className="flex justify-between items-center  rounded-xl py-[15px] px-[30px] shadow-md sm:w-[320px] h-[60px] capitalize  mb-5  sm:mb-0 dark:bg-gray-600"
@@ -147,7 +147,7 @@ const Form = () => {
               <div className="flex flex-col">
                 <label className="relative">
                   <input
-                    {...register('phoneNumber')}
+                    {...register("phoneNumber")}
                     name="phoneNumber"
                     placeholder="Phone Number"
                     className="flex justify-between items-center  rounded-xl py-[15px] px-[30px] shadow-md sm:w-[320px] h-[60px] mb-5  sm:mb-0 dark:bg-gray-600"
@@ -172,7 +172,7 @@ const Form = () => {
               <div className="flex flex-col">
                 <label className="relative">
                   <input
-                    {...register('message')}
+                    {...register("message")}
                     name="message"
                     placeholder="Your Message"
                     className="flex justify-between items-center  rounded-xl py-[15px] px-[30px] shadow-md sm:w-[670px] h-[60px] overflow-ellipsis overflow-hidden dark:bg-gray-600"

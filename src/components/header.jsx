@@ -87,7 +87,7 @@ const Header = () => {
         style={{ color: `${headerText}` }}
         className="hidden sm:flex text-sm font-bold ml-10 mr-5 hover:text-orange-500 cursor-pointer"
       >
-        Get In Touch
+        How can we help you today
       </p>
       <div className="mr-10">
         <ThemeChanger />
