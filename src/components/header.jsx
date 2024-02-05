@@ -1,15 +1,15 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
-import searchIcon from '../../src/assets/icons/search.png';
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import searchIcon from "../../src/assets/icons/search.png";
 
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import ThemeChanger from './themeChanger';
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import ThemeChanger from "./themeChanger";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
-  const [headerColor, setHeaderColor] = useState('transparent');
-  const [headerText, setHeaderText] = useState('white');
+  const [headerColor, setHeaderColor] = useState("transparent");
+  const [headerText, setHeaderText] = useState("white");
 
   const handleHeader = () => {
     setHeader(!header);
@@ -22,14 +22,14 @@ const Header = () => {
   useEffect(() => {
     const handleColorChange = () => {
       if (window.scrollY >= 250) {
-        setHeaderColor('linear-gradient(to right, #8e2de2, #4a00e0)');
-        setHeaderText('#ffffff');
+        setHeaderColor("linear-gradient(to right, #8e2de2, #4a00e0)");
+        setHeaderText("#ffffff");
       } else {
-        setHeaderColor('transparent');
-        setHeaderText('#ffffff');
+        setHeaderColor("transparent");
+        setHeaderText("#ffffff");
       }
     };
-    window.addEventListener('scroll', handleColorChange);
+    window.addEventListener("scroll", handleColorChange);
   }, []);
 
   return (
@@ -45,7 +45,7 @@ const Header = () => {
             style={{ color: `${headerText}` }}
             className="py-2 text-2xl font-bold hover:text-orange-500"
           >
-            Constructor
+            CashBazaar
           </h1>
         </Link>
       </div>
@@ -73,7 +73,7 @@ const Header = () => {
           <Link href="#about-container">About</Link>
         </li>
         <li className=" p-4 hover:text-orange-500">
-          <Link href="#services">Services</Link>
+          <Link href="#services">Why Cashbazaar?</Link>
         </li>
         <li className=" p-4 hover:text-orange-500">
           <Link href="#reviews">Reviews</Link>
@@ -105,8 +105,8 @@ const Header = () => {
       <div
         className={
           header
-            ? 'sm:hidden absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center w-full h-screen bg-[#020308ea] text-center ease-in duration-300'
-            : 'sm:hidden absolute top-0 right-0 bottom-0 left-[-100%] flex justify-center items-center w-full h-screen bg-[#020308ea] text-center ease-in duration-300'
+            ? "sm:hidden absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center w-full h-screen bg-[#020308ea] text-center ease-in duration-300"
+            : "sm:hidden absolute top-0 right-0 bottom-0 left-[-100%] flex justify-center items-center w-full h-screen bg-[#020308ea] text-center ease-in duration-300"
         }
       >
         <ul
@@ -121,7 +121,7 @@ const Header = () => {
           </li>
           <li className="mx-7 py-4 text-4xl hover:text-orange-500">
             <Link href="#services" onClick={handleMobileHeader}>
-              Services
+              WHY CashBazaar
             </Link>
           </li>
           <li className="mx-7 py-4 text-4xl hover:text-orange-500">

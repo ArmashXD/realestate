@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import React from 'react';
-import eyeIcon from '../assets/icons/eye.png';
+import Image from "next/image";
+import React from "react";
+import eyeIcon from "../assets/icons/eye.png";
 
 const Card = ({ imageSrc, title, price }) => {
   return (
-    <div className="w-[350px] h-[400px] hover:scale-105 ease-in duration-200 mx-auto bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-700">
+    <div className="w-[350px] h-[600px] hover:scale-105 ease-in duration-200 mx-auto bg-white rounded-xl shadow-md overflow-hidden dark:bg-slate-700">
       <div className="flex flex-col items-start">
         <div className="relative">
           <Image
@@ -34,6 +34,18 @@ const Card = ({ imageSrc, title, price }) => {
           </p>
           <p className="text-[13px] leading-[25px] text-blueCardSubTitle font-bold py-[10px]  dark:text-white">
             14 Patrick Brem Ct. Mahwah, NJ07430
+          </p>
+          <p className="text-[13px] leading-[25px] text-blueCardSubTitle font-bold py-[10px]  dark:text-white">
+            Property’s Total Sqft: 1400
+          </p>
+          <p className="text-[13px] leading-[25px] text-blueCardSubTitle font-bold py-[10px]  dark:text-white">
+            Total Sqft sold: 400
+          </p>
+          <p className="text-[13px] leading-[25px] text-blueCardSubTitle font-bold py-[10px]  dark:text-white">
+            Total Sqft booked: 900
+          </p>
+          <p className="text-[13px] leading-[25px] text-blueCardSubTitle font-bold py-[10px]  dark:text-white">
+            Total Sqft booked: 100
           </p>
           <p className="text-xs leading-5 text-blueCardSubTitle font-bold dark:text-white">
             3 Beds&nbsp;&nbsp;-&nbsp;&nbsp;2 baths&nbsp;&nbsp;-&nbsp;&nbsp;3,450

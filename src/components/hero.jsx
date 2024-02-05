@@ -1,15 +1,15 @@
-import Image from 'next/image';
-import React from 'react';
-import heroBg from '../assets/images/heroBackground.png';
-import arrowIcon from '../assets/icons/arrow.png';
-import phoneIcon from '../assets/icons/contact.png';
-import mailIcon from '../assets/icons/mail.png';
+import Image from "next/image";
+import React from "react";
+import heroBg from "../assets/images/heroBackground.png";
+import arrowIcon from "../assets/icons/arrow.png";
+import phoneIcon from "../assets/icons/contact.png";
+import mailIcon from "../assets/icons/mail.png";
 
 const Hero = ({ address, phone, email }) => {
   const showMoreBtn = () => {
     document
-      .getElementById('about-container')
-      .scrollIntoView({ behavior: 'smooth' });
+      .getElementById("about-container")
+      .scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -23,7 +23,7 @@ const Hero = ({ address, phone, email }) => {
       <div className="w-full h-screen relative ">
         <div className="relative h-screen text-center flex flex-col justify-center items-center">
           <button className="hidden lg:block bg-orange-600 hover:bg-orange-500 px-2 py-1 rounded-2xl text-white h-8 w-28 font-black text-xs uppercase cursor-pointer">
-            Real Estate
+            CashBazaar
           </button>
           <h1 className="font-normal text-7xl text-center mt-24 text-white capitalize">
             find real estate
@@ -35,27 +35,32 @@ const Hero = ({ address, phone, email }) => {
               <Image
                 src={arrowIcon}
                 alt="arrow icon"
-                className="w-5 h-5 mx-9 self-center"
+                className="w-5 h-5 mx-2 self-center"
               />
-              <p className="text-white text-xl py-2 ">{address}</p>
+              <p className="text-white text-small py-2 ">
+                Suite No. 27 and 28 Ground Floor, 172-N Kehkashan Shopping Mall,
+                Tariq Road, Block 2, PECHS, Karachi
+              </p>
             </div>
 
             <div className="flex ml-20 mr-20">
               <Image
                 src={phoneIcon}
                 alt="phone icon"
-                className="w-5 h-5 mx-9 self-center"
+                className="w-5 h-5 mx-2 self-center"
               />
-              <p className="text-white text-xl py-2">{phone}</p>
+              <p className="text-white text-small py-2">0320 5831020 </p>
             </div>
 
             <div className="flex ml-20">
               <Image
                 src={mailIcon}
                 alt="mail icon"
-                className="w-5 h-5 mx-9 self-center"
+                className="w-5 h-5 mx-2 self-center"
               />
-              <p className="text-white text-xl py-2">{email}</p>
+              <p className="text-white text-small py-2">
+                usamaabid496@yahoo.com
+              </p>
             </div>
           </div>
           {/* Show more button  */}
